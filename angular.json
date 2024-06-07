@@ -27,12 +27,38 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              {
+                "glob": "tarteaucitron.css",
+                "input": "node_modules/tarteaucitronjs/css/",
+                "output": "./css/"
+              },
+              {
+                "glob": "tarteaucitron.en.js",
+                "input": "node_modules/tarteaucitronjs/lang/",
+                "output": "./lang/"
+              },
+              {
+                "glob": "tarteaucitron.fr.js",
+                "input": "node_modules/tarteaucitronjs/lang/",
+                "output": "./lang/"
+              },
+              {
+                "glob": "tarteaucitron.services.js",
+                "input": "node_modules/tarteaucitronjs/",
+                "output": "./"
+              }
             ],
             "styles": [
+              "node_modules/tarteaucitronjs/css/tarteaucitron.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/tarteaucitronjs/tarteaucitron.js",
+              "node_modules/tarteaucitronjs/tarteaucitron.services.js",
+              "node_modules/tarteaucitronjs/lang/tarteaucitron.fr.js",
+              "node_modules/tarteaucitronjs/lang/tarteaucitron.en.js"
+            ]
           },
           "configurations": {
             "production": {
